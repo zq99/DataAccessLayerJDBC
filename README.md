@@ -6,4 +6,8 @@ The project has its own object model to retrieve data, so it converts to the Res
 
 This DataTable object can then be used in applications, without having to persist a connection with the database or use the data immediately whilst a connection is open.
 
+## Setup
+
+You maye have to download the SQL Server driver for JDBC from here: https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15
+
 
