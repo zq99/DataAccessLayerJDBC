@@ -1,6 +1,6 @@
 # Java Data Access Layer (DAL) for SQL Server
 
-This project is a an experiment to create a Data Access Layer to handle database operations in java project.
+This project is a an experiment to create a Data Access Layer in Java that interacts with SQL Server using JDBC.
 
 The project has its own object model to retrieve data, so it converts to the ResultSet object to a custom DataTable object.
 
