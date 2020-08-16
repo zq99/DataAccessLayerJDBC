@@ -47,7 +47,7 @@ DataTable -> DataRow -> DataCell
 
 ## Example
 
-Here is a simple example of extracting data based upon a raw SQL query that is sent ot the layer:
+Here is a simple example of extracting data based upon a raw SQL query that is sent to the layer:
 
         SQLServerDataSource sqlServerDataSource = Credentials.getSQLServerDataSource();
         DataAccessLayer dataAccessLayer = new DataAccessLayer(sqlServerDataSource);
