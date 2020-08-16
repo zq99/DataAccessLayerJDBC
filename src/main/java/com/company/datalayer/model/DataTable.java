@@ -23,6 +23,11 @@ public class DataTable {
         return dataRows.size();
     }
 
+
+    public ArrayList<DataRow> getDataRows(){
+        return this.dataRows;
+    }
+
     public DataRow getRow(int index){
         if(isValidIndexValue(index)){
             return dataRows.get(index);
