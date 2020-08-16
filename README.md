@@ -15,7 +15,7 @@ You may have to download the SQL Server driver for JDBC from here:
 
 ## Connection
 
-You need to specify the database name and server in the class credentials:
+You need to specify the database name and server in the class Credentials:
 
     final private static String server = "{ADD SERVER NAME HERE}";
     final private static String databaseName = "{ADD DATABASE NAME HERE}";
