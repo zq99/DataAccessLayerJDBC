@@ -13,7 +13,7 @@ You may have to download the SQL Server driver for JDBC from here:
 - https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15
 
 
-## Connection
+## Connecting
 
 You need to specify the database name and server in the class Credentials:
 
@@ -31,7 +31,7 @@ The layer maintains responsibility for open and closing connections to the datab
 
 ## Custom Object Model
 
-The layer has it's own object model to model data it retrives from SQL Server. The layer converts the ResultSet data object from JDBC to the custom DataTable object.
+The layer has it's own object model to model data it retrives from SQL Server. The layer converts the ResultSet data object from JDBC to a custom DataTable object.
 
 The purpose of this object model is get data from SQL Server without having to persist a connection with the database, while waiting for it to be used downstream in an
 application. 
