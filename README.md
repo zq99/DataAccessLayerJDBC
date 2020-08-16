@@ -26,7 +26,7 @@ The first constructor that can be used is one that accepts a SQLServerDataSource
 
 The second type of constructor that can be used is a URL representing the connection string to the database.
 
-    jdbc:sqlserver://;servername=MY_SERVER_NAME;databaseName=MY_DATABASE;integratedSecurity=true
+    jdbc:sqlserver://;servername=MY_SERVER_NAME;databaseName=MY_DATABASE_NAME;integratedSecurity=true
 
 The layer maintains responsibility for open and closing connections to the database.
 
