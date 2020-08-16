@@ -24,7 +24,7 @@ The layer object can be instantiated with one of two types of constructurs.
 
 The first constructor that can be used is a SQLServerDataSource object from the JDBC library.
 
-The second type of constructor that can be used is URL representing the connection string to the database.
+The second type of constructor that can be used is a URL representing the connection string to the database.
 
 The layer maintains responsibility for open and closing connections to the database.
 
