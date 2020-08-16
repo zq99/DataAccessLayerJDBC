@@ -22,9 +22,11 @@ You need to specify the database name and server in the class Credentials:
 
 The layer object can be instantiated with one of two types of constructurs.
 
-The first constructor that can be used is a SQLServerDataSource object from the JDBC library.
+The first constructor that can be used is one that accepts a SQLServerDataSource object from the JDBC library as an arguement.
 
 The second type of constructor that can be used is a URL representing the connection string to the database.
+
+    jdbc:sqlserver://;servername=server_name;databaseName=MY_DATABASE;integratedSecurity=true
 
 The layer maintains responsibility for open and closing connections to the database.
 
@@ -47,13 +49,12 @@ DataTable -> DataRow -> DataCell
 
 Here is a simple example of extracting data based upon a raw SQL query that is sent ot the layer:
 
-
         SQLServerDataSource sqlServerDataSource = Credentials.getSQLServerDataSource();
         DataAccessLayer dataAccessLayer = new DataAccessLayer(sqlServerDataSource);
         DataTable dataTable = dataAccessLayer.getDataFromSQLStatement("SELECT * FROM Country");
-        for(Iterator<?> iterator = dataTable.getIterator(); iterator.hasNext();){
-            String row = iterator.next().toString();
-            System.out.println(row);
+        for(DataRow dataRow : dataTable.getDataRows()){
+            System.out.println(dataRow.getValue("country_name"));
+            System.out.println(dataRow.getValue("country_region"));
         }
 
 ## Testing
@@ -63,3 +64,7 @@ The project includes unit tests for the DataTable object model hierarchy as well
 The tests for the Data Access Layer are reliant on the test SQL Server objects being created in this file: 
 
 - sql_create_test_objects.sql
+
+## Further Info
+
+- JDBC Overview: https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15
