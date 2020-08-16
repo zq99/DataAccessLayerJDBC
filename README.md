@@ -2,9 +2,9 @@
 
 This project is a basic example of how to create a Data Access Layer in Java that interacts with SQL Server using JDBC.
 
-The project has its own object model to retrieve data, so it converts to the ResultSet object to a custom DataTable object.
+The project has its own object model (DataTable) to retrieve data from SQL Server.
 
-This DataTable object can then be used in applications, without having to persist a connection with the database or use the data immediately whilst a connection is open.
+This DataTable object can then be used in applications, without having to persist a connection with the database.
 
 
 ## Requirements
@@ -31,7 +31,12 @@ The layer maintains responsibility for open and closing connections to the datab
 
 ## Custom Object Model
 
-The layer has it's own object model to model data it retrives from SQL Server
+The layer has it's own object model to model data it retrives from SQL Server. The layer converts the ResultSet data object from JDBC to the custom DataTable object.
+
+The purpose of this object model is get data from SQL Server without having to persist a connection with the database, while waiting for it to be used downstream in an
+application. 
+
+The DataTable object gives the data structure, and is easier to use than simply converting JDBC's ResultSet object into a List.
 
 The hierarchy is as follows (from highest to lowest level):
 
