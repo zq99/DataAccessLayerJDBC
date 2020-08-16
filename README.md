@@ -1,6 +1,6 @@
 # Java Data Access Layer for SQL Server
 
-This project is a an experiment to create a Data Access Layer in Java that interacts with SQL Server using JDBC.
+This project is a basic example of how to create a Data Access Layer in Java that interacts with SQL Server using JDBC.
 
 The project has its own object model to retrieve data, so it converts to the ResultSet object to a custom DataTable object.
 
@@ -51,4 +51,10 @@ Here is a simple example of extracting data based upon a raw SQL query that is s
             System.out.println(row);
         }
 
+## Testing
 
+The project includes unit tests for the DataTable object model hierarchy as well as the Data Access Layer.
+
+The tests for the Data Access Layer are reliant on the test SQL Server objects being created in this file: 
+
+- sql_create_test_objects.sql
