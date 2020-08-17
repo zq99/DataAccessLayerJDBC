@@ -4,7 +4,7 @@ This project is a basic example of how to create a Data Access Layer in Java tha
 
 The project has its own object model (DataTable) to retrieve data from SQL Server.
 
-This DataTable object can then be used in applications, without having to persist a connection with the database.
+This DataTable object can then be used in applications without having to persist a connection with the database.
 
 
 ## Requirements
@@ -24,19 +24,20 @@ The layer object can be instantiated with one of two types of constructurs.
 
 The first constructor that can be used is one that accepts a SQLServerDataSource object from the JDBC library as an arguement.
 
+    SQLServerDataSource sqlServerDataSource = Credentials.getSQLServerDataSource();
+    DataAccessLayer dataAccessLayer = new DataAccessLayer(sqlServerDataSource);
+
 The second type of constructor that can be used is a URL representing the connection string to the database.
 
-    jdbc:sqlserver://;servername=MY_SERVER_NAME;databaseName=MY_DATABASE_NAME;integratedSecurity=true
+    String connString = "jdbc:sqlserver://;servername=MY_SERVER_NAME;databaseName=MY_DATABASE_NAME;integratedSecurity=true";
+    DataAccessLayer dataAccessLayer = new DataAccessLayer(connString);
 
 The layer maintains responsibility for open and closing connections to the database.
 
 
 ## Custom Object Model
 
-The layer has it's own object model to model data it retrives from SQL Server. The layer converts the ResultSet data object from JDBC to a custom DataTable object.
-
-The purpose of this object model is get data from SQL Server without having to persist a connection with the database, while waiting for it to be used downstream in an
-application. 
+The layer has it's own object model to describe the data it retrieves from SQL Server. The layer converts a ResultSet data object from JDBC to a custom DataTable object.
 
 The DataTable object gives the data structure, and is easier to use than simply converting JDBC's ResultSet object into a List.
 
@@ -61,7 +62,7 @@ Here is a simple example of extracting data based upon a raw SQL query that is s
 
 The project includes unit tests for the DataTable object model hierarchy as well as the Data Access Layer.
 
-The tests for the Data Access Layer are reliant on the test SQL Server objects being created in this file: 
+The tests for the Data Access Layer are reliant on the SQL Server objects created in this file: 
 
 - sql_create_test_objects.sql
 
