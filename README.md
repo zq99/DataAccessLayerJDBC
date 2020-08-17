@@ -20,7 +20,7 @@ You need to specify the database name and server in the class Credentials:
     final private static String server = "{ADD SERVER NAME HERE}";
     final private static String databaseName = "{ADD DATABASE NAME HERE}";
 
-The layer object can be instantiated with one of two types of constructurs.
+The layer object can be instantiated with one of two types of constructors.
 
 The first constructor that can be used is one that accepts a SQLServerDataSource object from the JDBC library as a parameter.
 
