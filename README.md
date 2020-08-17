@@ -22,7 +22,7 @@ You need to specify the database name and server in the class Credentials:
 
 The layer object can be instantiated with one of two types of constructurs.
 
-The first constructor that can be used is one that accepts a SQLServerDataSource object from the JDBC library as an arguement.
+The first constructor that can be used is one that accepts a SQLServerDataSource object from the JDBC library as a parameter.
 
     SQLServerDataSource sqlServerDataSource = Credentials.getSQLServerDataSource();
     DataAccessLayer dataAccessLayer = new DataAccessLayer(sqlServerDataSource);
