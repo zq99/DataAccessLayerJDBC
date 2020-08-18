@@ -35,7 +35,7 @@ The second type of constructor that can be used is a URL representing the connec
 The layer maintains responsibility for open and closing connections to the database.
 
 
-## Custom Object Model
+## Data Object Model
 
 The layer has it's own object model to describe the data it retrieves from SQL Server. The layer converts a ResultSet data object from JDBC to a custom DataTable object.
 
