@@ -13,7 +13,7 @@ You may have to download the SQL Server driver for JDBC from here:
 - https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15
 
 
-## Connecting
+## Database Connection
 
 You need to specify the database name and server in the class Credentials:
 
@@ -35,7 +35,7 @@ The second type of constructor that can be used is a URL representing the connec
 The layer maintains responsibility for open and closing connections to the database.
 
 
-## Data Object Model
+## DataTable Object Model
 
 The layer has it's own object model to describe the data it retrieves from SQL Server. The layer converts a ResultSet data object from JDBC to a custom DataTable object.
 
